@@ -24,7 +24,7 @@ import scala.util.parsing.json.JSON
   */
 object ZengXianSpark {
   Logger.getLogger("org").setLevel(Level.ERROR) //设置日志级别
-  var confPath: String = System.getProperty("user.dir") + File.separator + "zengxian.properties"
+  var confPath: String = System.getProperty("user.dir") + File.separator + "spark.properties"
 
   /**
     * 定义对象
@@ -57,14 +57,14 @@ object ZengXianSpark {
     val properties = new Properties()
     val file = new File(confPath)
     if (!file.exists()) {
-      System.out.println(ZengXianSpark.getClass.getClassLoader.getResource("zengxian.properties"))
-      val in = ZengXianSpark.getClass.getClassLoader.getResourceAsStream("zengxian.properties")
+      System.out.println(ZengXianSpark.getClass.getClassLoader.getResource("spark.properties"))
+      val in = ZengXianSpark.getClass.getClassLoader.getResourceAsStream("spark.properties")
       properties.load(in);
     } else {
       properties.load(new FileInputStream(confPath))
     }
     val brokers = properties.getProperty("kafka.brokers")
-    val topics = properties.getProperty("kafka.topics")
+    val topics = properties.getProperty("kafka.topics.zengxian")
     val kuduMaster = properties.getProperty("kudumaster.list")
     println("kafka.brokers:" + brokers)
     println("kafka.topics:" + topics)
