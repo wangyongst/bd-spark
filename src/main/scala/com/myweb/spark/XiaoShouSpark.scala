@@ -79,7 +79,7 @@ object XiaoShouSpark {
           map.get("hanghao").get.asInstanceOf[String],
           map.get("shujuguishujigou").get.asInstanceOf[String],
           map.get("shujuguishusheng").get.asInstanceOf[String],
-          map.get(" shujuguishushi").get.asInstanceOf[String],
+          map.get("shujuguishushi").get.asInstanceOf[String],
           map.get("mingdanleixing").get.asInstanceOf[String],
           map.get("mingdanxiangshu").get.asInstanceOf[String],
           map.get("shoujihaoma").get.asInstanceOf[String],

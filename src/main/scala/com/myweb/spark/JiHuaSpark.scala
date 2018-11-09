@@ -80,14 +80,14 @@ object JiHuaSpark {
           map.get("xiafafangshi").get.asInstanceOf[String],
           map.get("xiafabumen").get.asInstanceOf[String],
           map.get("xiafasheng").get.asInstanceOf[String],
-          map.get(" xiafashi").get.asInstanceOf[String],
-          map.get(" huodongyue").get.asInstanceOf[String],
+          map.get("xiafashi").get.asInstanceOf[String],
+          map.get("huodongyue").get.asInstanceOf[String],
           map.get("shifouchaijie").get.asInstanceOf[String],
           map.get("chaijiefenshu").get.asInstanceOf[String],
           map.get("xiafariqi").get.asInstanceOf[String],
           map.get("xiafaliang").get.asInstanceOf[String],
           map.get("mingdanleixing").get.asInstanceOf[String],
-          map.get(" mingdanxiangshu").get.asInstanceOf[String],
+          map.get("mingdanxiangshu").get.asInstanceOf[String],
           map.get("youxianji").get.asInstanceOf[String]
         )
       })
