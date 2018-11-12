@@ -93,7 +93,7 @@ object JiHuaSpark {
       })
       //将RDD转换为DataFrame
       val jihuaDF = sqlContext.createDataFrame(newrdd)
-      println("Up Line" + brokers)
+      println("JiHua Up Line" + brokers)
       kuduContext.upsertRows(jihuaDF, "jihua")
     })
     ssc.start()

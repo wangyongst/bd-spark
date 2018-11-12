@@ -113,7 +113,7 @@ object ZengXianSpark {
       })
       //将RDD转换为DataFrame
       val zengxianDF = sqlContext.createDataFrame(newrdd)
-      println("Up Line" + brokers)
+      println("ZengXian Up Line" + brokers)
       kuduContext.upsertRows(zengxianDF, "zengxian")
     })
     ssc.start()

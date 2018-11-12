@@ -95,7 +95,7 @@ object XiaoShouSpark {
       })
       //将RDD转换为DataFrame
       val xiaoshouDF = sqlContext.createDataFrame(newrdd)
-      println("Up Line" + brokers)
+      println("XiaoShou Up Line" + brokers)
       kuduContext.upsertRows(xiaoshouDF, "xiaoshou")
     })
     ssc.start()

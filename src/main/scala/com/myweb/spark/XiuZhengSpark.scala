@@ -13,6 +13,17 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 import scala.util.parsing.json.JSON
 
+/**
+  * nohup spark-submit --class com.myweb.spark.ZengXianSpark --master spark://ZHS-1:7077 --executor-memory 800m --total-executor-cores 4 bd-spark-1.0-SNAPSHOT.jar &
+nohup spark-submit --class com.myweb.spark.CeLueSpark --master spark://ZHS-1:7077 --executor-memory 800m --total-executor-cores 4 bd-spark-1.0-SNAPSHOT.jar bd-spark-1.0-SNAPSHOT.jar &
+nohup spark-submit --class com.myweb.spark.JiHuaSpark --master spark://ZHS-1:7077 --executor-memory 800m --total-executor-cores 4 bd-spark-1.0-SNAPSHOT.jar bd-spark-1.0-SNAPSHOT.jar &
+nohup spark-submit --class com.myweb.spark.XiaoShouSpark --master spark://ZHS-1:7077 --executor-memory 800m --total-executor-cores 4 bd-spark-1.0-SNAPSHOT.jar bd-spark-1.0-SNAPSHOT.jar &
+nohup spark-submit --class com.myweb.spark.XiuZhengSpark --master spark://ZHS-1:7077 --executor-memory 800m --total-executor-cores 4 bd-spark-1.0-SNAPSHOT.jar bd-spark-1.0-SNAPSHOT.jar &
+
+  */
+
+
+
 object XiuZhengSpark {
   Logger.getLogger("org").setLevel(Level.ERROR) //设置日志级别
   var confPath: String = System.getProperty("user.dir") + File.separator + "spark.properties"

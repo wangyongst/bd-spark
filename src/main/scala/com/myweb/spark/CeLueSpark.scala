@@ -101,7 +101,7 @@ object CeLueSpark {
       })
       //将RDD转换为DataFrame
       val celueDF = sqlContext.createDataFrame(newrdd)
-      println("Up Line" + brokers)
+      println("CeLue Up Line" + brokers)
       kuduContext.upsertRows(celueDF, "celue")
     })
     ssc.start()
