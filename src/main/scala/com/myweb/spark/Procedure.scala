@@ -78,8 +78,7 @@ object Procedure {
 
   }
 
-
-    def PROC_INPUT_AGILE_MAIN(t_guidenum: String, t_result: Int, sqlContext: SQLContext): Unit = {
+  def PROC_INPUT_AGILE_MAIN(t_guidenum: String, t_result: Int, sqlContext: SQLContext): Unit = {
 
     println("查询入库批次对应操作人员和文件存储路径")
     var v_goto: String = "R"
@@ -100,5 +99,10 @@ object Procedure {
         }
       }
     }
+  }
+
+  def PROC_INPUT_DP(t_guidenum: String, t_result: Int, sqlContext: SQLContext): Unit = {
+    var sql = "SELECT b.mfield field,b.worthtype FROM dp_guidenum_field b WHERE b.guidenum=" + t_guidenum + " ORDER BY b.orderno ";
+    var selectOut: DataFrame = sqlContext.sql(sql)
   }
 }
